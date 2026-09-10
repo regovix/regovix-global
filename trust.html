@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trust & Security — Regovix</title>
+<meta name="description" content="How Regovix protects your data — hosting, encryption, access controls, AI data handling, and subprocessors.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0E1B2B; --navy-2: #142639; --navy-3: #22394F;
+  --teal: #0BBFA0; --teal-dim: #0a9c83; --amber: #F2994A;
+  --ink: #F4F6F8; --slate: #90A0B2; --slate-dim: #5E7086;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--navy); color: var(--ink); font-family: 'Bricolage Grotesque', -apple-system, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--teal); }
+.wrap { max-width: 780px; margin: 0 auto; padding: 0 32px; }
+nav { border-bottom: 1px solid var(--navy-3); padding: 22px 0; }
+nav .wrap { display: flex; align-items: center; justify-content: space-between; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.05rem; text-decoration: none; }
+.back { font-size: 0.9rem; color: var(--slate); text-decoration: none; }
+main { padding: 64px 0 100px; }
+h1 { font-size: 2.1rem; font-weight: 800; letter-spacing: -0.01em; }
+.subtitle { color: var(--slate); margin-top: 10px; font-size: 1.05rem; }
+.updated { color: var(--slate-dim); font-size: 0.85rem; margin-top: 18px; }
+.notice {
+  margin-top: 32px; padding: 20px 22px; border-radius: 10px;
+  background: rgba(242,153,74,0.08); border: 1px solid rgba(242,153,74,0.35);
+  font-size: 0.92rem; line-height: 1.6;
+}
+.notice strong { color: var(--amber); }
+.glance { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 32px 0; }
+.glance-item { background: var(--navy-2); border: 1px solid var(--navy-3); border-radius: 10px; padding: 18px; }
+.glance-item .emoji { font-size: 1.3rem; }
+.glance-item .title { font-weight: 700; margin-top: 8px; font-size: 0.92rem; }
+.glance-item .desc { color: var(--slate-dim); font-size: 0.82rem; margin-top: 4px; }
+h2 { font-size: 1.3rem; font-weight: 700; margin-top: 44px; margin-bottom: 14px; }
+p, li { color: var(--slate); font-size: 0.97rem; }
+p { margin-bottom: 14px; }
+ul { margin: 12px 0 16px 22px; }
+li { margin-bottom: 8px; }
+table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 0.86rem; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--navy-3); color: var(--slate); vertical-align: top; }
+th { color: var(--ink); font-weight: 700; }
+footer { border-top: 1px solid var(--navy-3); padding: 32px 0; font-size: 0.85rem; color: var(--slate-dim); }
+footer a { color: var(--slate); margin-right: 20px; }
+@media (max-width: 640px) { .glance { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="/"><span style="color:#fff;">Reg</span><span style="color:var(--teal);">ovix</span></a>
+    <a class="back" href="/">← Back to home</a>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <h1>Trust & Security</h1>
+    <p class="subtitle">How Regovix protects your evidence and compliance data.</p>
+    <p class="updated">Last updated: September 2026</p>
+
+    <div class="notice">
+      <strong>Honest status, not a compliance claim.</strong> Regovix as a company does not currently hold formal certifications like SOC 2 or ISO 27001 — several of our infrastructure subprocessors do, listed below. If a specific certification is a requirement for your organisation, contact us and we'll tell you plainly whether we currently meet it.
+    </div>
+
+    <div class="glance">
+      <div class="glance-item"><div class="emoji">🔒</div><div class="title">Encryption in transit</div><div class="desc">HTTPS enforced everywhere</div></div>
+      <div class="glance-item"><div class="emoji">🚫</div><div class="title">No data selling</div><div class="desc">Never sold or shared with advertisers</div></div>
+      <div class="glance-item"><div class="emoji">📤</div><div class="title">Data export</div><div class="desc">Export your records at any time</div></div>
+      <div class="glance-item"><div class="emoji">🤖</div><div class="title">AI training</div><div class="desc">Anthropic doesn't train on API data by default</div></div>
+      <div class="glance-item"><div class="emoji">👤</div><div class="title">Least-privilege access</div><div class="desc">Customer data access is need-to-know only</div></div>
+      <div class="glance-item"><div class="emoji">🌐</div><div class="title">Independent apps</div><div class="desc">Each application has its own isolated database</div></div>
+    </div>
+
+    <h2>1. Hosting & infrastructure</h2>
+    <p>Regovix's global platform is a set of independently deployed applications, each with its own database — a genuine security boundary between apps, not just a role permission.</p>
+    <table>
+      <tr><th>Component</th><th>Provider</th><th>Notes</th></tr>
+      <tr><td>Website & applications</td><td>Netlify, Inc.</td><td>Hosting and serverless functions</td></tr>
+      <tr><td>Application databases</td><td>Supabase (PostgreSQL)</td><td>One separate project per application</td></tr>
+      <tr><td>AI processing</td><td>Anthropic PBC</td><td>Powers EvidenceIQ's Contradiction Engine, BarrierWatch's ICAM analysis, and other AI-assisted features</td></tr>
+    </table>
+
+    <h2>2. Encryption & access controls</h2>
+    <ul>
+      <li>All data in transit is encrypted via HTTPS — there's no option to access Regovix unencrypted</li>
+      <li>Each application enforces row-level security so an organisation can only ever see its own data</li>
+      <li>Role-based access within each application — different users see only what their role permits</li>
+      <li>Passwords are hashed, never stored in plain text</li>
+    </ul>
+
+    <h2>3. AI data handling</h2>
+    <p>Several Regovix applications use Claude AI (Anthropic) for specific features — EvidenceIQ's contradiction detection, BarrierWatch's ICAM classification and corrective-action guardrail check, and SDS extraction in ChemVault.</p>
+    <p><strong>Anthropic does not train its models on API data by default</strong> under standard API terms. We recommend avoiding submitting sensitive personal information into AI-assisted fields where it isn't necessary for the task.</p>
+
+    <h2>4. Subprocessors</h2>
+    <table>
+      <tr><th>Subprocessor</th><th>Purpose</th></tr>
+      <tr><td>Netlify, Inc.</td><td>Website and application hosting</td></tr>
+      <tr><td>Supabase</td><td>Application databases</td></tr>
+      <tr><td>Anthropic PBC</td><td>AI processing — input only, not retained for training</td></tr>
+      <tr><td>GitHub, Inc.</td><td>Source code repository — no customer data</td></tr>
+    </table>
+
+    <h2>5. Data export & portability</h2>
+    <p>Your data belongs to you. Most Regovix applications include CSV export for tabular records. If you need a full export in a specific format, contact us directly and we'll arrange it.</p>
+
+    <h2>6. Reporting a security issue</h2>
+    <p>If you discover a security vulnerability, please report it responsibly to the email below with "Security Issue" in the subject line. We'll acknowledge within 1 business day.</p>
+
+    <h2>7. Questions</h2>
+    <p>For security questions, data processing agreements, or specific data residency requirements, contact us directly.</p>
+    <p><strong>Regovix</strong><br>Email: <a href="mailto:info@regovix.com.au">info@regovix.com.au</a></p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="/">Home</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Service</a>
+    <a href="/trust.html">Trust &amp; Security</a>
+    <br><br>
+    © 2026 Regovix.
+  </div>
+</footer>
+
+</body>
+</html>
